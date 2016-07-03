@@ -13,6 +13,7 @@ $bright: #FFD933;
 $anchor: #CCCC52;
 $complement: #8FB259;
 $dark: #192B33;
+$plain: #FFFFFF;
 
 /*
 #FF7F00 orange
@@ -20,6 +21,7 @@ $dark: #192B33;
 #CCCC52 light green
 #8FB259 green
 #192B33 dark blue
+#FFFFFF white
 */
 
 /***** Normalize ******/
@@ -42,6 +44,7 @@ $dark: #192B33;
 html, body {
   height: 100%;
   margin: 0;
+  background: $plain;
 }
 
 a:link {
@@ -68,12 +71,11 @@ input, select, textarea, button {
   padding: 4px 0;
   width: 100%;
   height: 32px;
-  background-color: $complement;
+  background-color: $dark;
   text-align: center;
 }
 
 .image-getter {
-  background: $complement;
   overflow: visible;
   margin: 0 auto;
 }
@@ -95,7 +97,7 @@ input, select, textarea, button {
 
 .top-button {
   background-color: $emphasis;
-  color: $bright;
+  color: $anchor;
   @include border-radius(0 5px 5px 0);
 }
 
@@ -112,7 +114,7 @@ input, select, textarea, button {
   width: 100%;
   margin: 0;
   padding: 0;
-  color: $dark;
+  color: $complement;
   text-align: center;
   overflow-x: hidden;
   overflow-y: auto;
@@ -148,7 +150,7 @@ input, select, textarea, button {
   left: 0;
   right: 0;
   overflow: hide;
-  background: $complement;
+  background: $dark;
   color: $bright;
 }
 
