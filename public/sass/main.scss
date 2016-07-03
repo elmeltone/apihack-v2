@@ -64,58 +64,30 @@ input, select, textarea, button {
 
 /***** Masthead ******/
 
-#title, #subtitle, #footer-title, .tom-trivia {
-  font-family: serif;
-}
-
 #header {
-  margin-right: 0;
-  padding: 0;
+  padding: 4px 0;
   width: 100%;
-  height: 165px;
+  height: 32px;
   background-color: $complement;
   text-align: center;
-}
-
-#title {
-  font-size: 55px;
-  padding: 0.5rem;
-  color: $bright;
-  text-align: center;
-  margin: 0 auto;
-}
-
-#subtitle {
-  font-size: 20px;
-  padding: 0;
-  text-align: center;
-  margin: auto;
-  height: auto;
-  color: $bright;
-}
-
-#general-search {
-  width: 100%;
-  max-height: 2em;
-  display: inline;
-  text-align: left;
-  margin: 5px auto;
 }
 
 .image-getter {
-  background-color: $complement;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 20%;
-  padding-top: 1rem;
-  padding-bottom: 2rem;
+  background: $complement;
   overflow: visible;
+  margin: 0 auto;
+}
+
+#general, .top-button {
+  font-size: 1em;
+  padding: 5px 8px;
+  border: 1px solid transparent;
+  -webkit-appearance: none;
 }
 
 #general {
-  height: 1.5rem;
-  width: 70%;
-  font-size: 18px;
+  color: $dark;
+  width: 40%;
   @include border-radius(5px 0 0 5px);
   padding-left: 3%;
   text-align: center;
@@ -124,10 +96,7 @@ input, select, textarea, button {
 .top-button {
   background-color: $emphasis;
   color: $bright;
-  border: none;
   @include border-radius(0 5px 5px 0);
-  height: 1.75rem;
-  font-size: 15px;
 }
 
 /***** Results Section (Middle) ******/
@@ -135,12 +104,11 @@ input, select, textarea, button {
 .middle {
   width: 100%;
   background-size: cover;
-  overflow: none;
   margin: 0;
 }
 
 #results-wrapper {
-  height: 100%;
+  height: 90%;
   width: 100%;
   margin: 0;
   padding: 0;
@@ -166,43 +134,22 @@ input, select, textarea, button {
   text-align: center;
 }
 
-/***** Footer ******/
-
-footer {
-  min-height: 10%;
+.pagination {
+  margin-bottom: 48px;
 }
+
+/***** Footer ******/
 
 #footer-wrapper {
   width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 10px 10px 10px 20px;
+  height: 12px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hide;
   background: $complement;
   color: $bright;
-  float: left;
-}
-
-/* ------------------ */
-/* Detailed Search Options hidden until functionality resolved */
-#footer-title, .detail-getter, .hidden {
-  display: none;
-}
-/* ------------------ */
-
-#footer-title {
-  font-size: 20px;
-  text-align: center;
-}
-
-.detail-getter {
-  text-align: center;
-}
-
-.details-titles {
-  display: inline;
-  margin-left: 5px;
-  text-align: right;
-  padding-right: -5px;
 }
 
 .form-box {
