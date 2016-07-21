@@ -422,7 +422,7 @@ input:focus, select:focus, textarea:focus, button:focus {
 
 #general {
   color: #192B33;
-  width: 40%;
+  width: 60%;
   -webkit-border-radius: 5px 0 0 5px;
   -moz-border-radius: 5px 0 0 5px;
   -ms-border-radius: 5px 0 0 5px;
@@ -462,9 +462,15 @@ input:focus, select:focus, textarea:focus, button:focus {
   float: none !important;
   padding-top: 1em; }
 
-.tom-trivia {
-  width: 60%;
+.text-wrapper {
+  width: 100%;
+  margin: 10vh 0;
+  padding: 0; }
+
+.intro {
+  width: 90%;
   margin: auto;
+  padding-bottom: 1.5rem;
   font-size: 22px;
   text-align: center; }
 

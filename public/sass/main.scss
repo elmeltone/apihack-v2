@@ -89,7 +89,7 @@ input, select, textarea, button {
 
 #general {
   color: $dark;
-  width: 40%;
+  width: 60%;
   @include border-radius(5px 0 0 5px);
   padding-left: 3%;
   text-align: center;
@@ -129,9 +129,16 @@ input, select, textarea, button {
   padding-top: 1em;
 }
 
-.tom-trivia {
-  width: 60%;
+.text-wrapper {
+  width: 100%;
+  margin: 10vh 0;
+  padding: 0;
+}
+
+.intro {
+  width: 90%;
   margin: auto;
+  padding-bottom: 1.5rem;
   font-size: 22px;
   text-align: center;
 }
