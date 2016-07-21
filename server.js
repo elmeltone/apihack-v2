@@ -2,8 +2,10 @@ var express = require('express');
 
 var App = express();
 
-App.get('/', function(request, response) {
-  response.send(public/index.html);
+App.use(express.static(__dirname + '/public'));
+
+App.get('*', function(req, res){
+  res.sendfile(__dirname + '/public/index.html');
 });
 
 App.listen((process.env.PORT || 8080));
