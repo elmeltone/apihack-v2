@@ -1,11 +1,11 @@
 var express = require('express');
-var app = express();
-var path = require('path');
 
-app.get('/', function(req, res) {
-  res.send(public/index.html);
+var App = express();
+
+App.get('/', function(request, response) {
+  response.send(public/index.html);
 });
 
-app.listen((process.env.PORT || 8080));
+App.listen((process.env.PORT || 8080));
 
-exports.app = app;
+exports.App = App;
