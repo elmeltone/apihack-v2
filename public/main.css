@@ -391,13 +391,13 @@ html, body {
   background: #FFFFFF; }
 
 a:link {
-  color: #FF7F00; }
+  color: #E74C3C; }
 
 a:hover {
   text-decoration: underline; }
 
 a:visited {
-  color: #CCCC52; }
+  color: #ECF0F1; }
 
 input:focus, select:focus, textarea:focus, button:focus {
   outline: none; }
@@ -407,7 +407,7 @@ input:focus, select:focus, textarea:focus, button:focus {
   padding: 4px 0;
   width: 100%;
   height: 32px;
-  background-color: #192B33;
+  background-color: #2C3E50;
   text-align: center; }
 
 .image-getter {
@@ -421,7 +421,7 @@ input:focus, select:focus, textarea:focus, button:focus {
   -webkit-appearance: none; }
 
 #general {
-  color: #192B33;
+  color: #2C3E50;
   width: 60%;
   -webkit-border-radius: 5px 0 0 5px;
   -moz-border-radius: 5px 0 0 5px;
@@ -431,8 +431,8 @@ input:focus, select:focus, textarea:focus, button:focus {
   text-align: center; }
 
 .top-button {
-  background-color: #FF7F00;
-  color: #CCCC52;
+  background-color: #E74C3C;
+  color: #ECF0F1;
   -webkit-border-radius: 0 5px 5px 0;
   -moz-border-radius: 0 5px 5px 0;
   -ms-border-radius: 0 5px 5px 0;
@@ -449,7 +449,7 @@ input:focus, select:focus, textarea:focus, button:focus {
   width: 100%;
   margin: 0;
   padding: 0;
-  color: #8FB259;
+  color: #2980B9;
   text-align: center;
   overflow-x: hidden;
   overflow-y: auto; }
@@ -486,8 +486,8 @@ input:focus, select:focus, textarea:focus, button:focus {
   left: 0;
   right: 0;
   overflow: hide;
-  background: #192B33;
-  color: #FFD933; }
+  background: #2C3E50;
+  color: #3498DB; }
 
 .form-box {
   width: 33.333%;
@@ -501,8 +501,8 @@ input:focus, select:focus, textarea:focus, button:focus {
   display: inline; }
 
 .button {
-  background-color: #FF7F00;
-  color: #FFD933;
+  background-color: #E74C3C;
+  color: #3498DB;
   border: none;
   border-radius: 15px;
   margin-right: 5px; }
