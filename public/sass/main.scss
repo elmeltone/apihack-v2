@@ -211,6 +211,12 @@ input, select, textarea, button {
 
 /***** Media Queries ******/
 
+@media screen and (min-width: 320px) {
+  .results {
+    width: 300px;
+  }
+}
+
 @media screen and (min-width: 420px) {
   .results {
     width: 400px;
@@ -220,5 +226,7 @@ input, select, textarea, button {
 @media screen and (min-width: 520px) {
   .results {
     width: 500px;
+    margin-top: 10vh;
+    padding-top: 0;
   }
 }

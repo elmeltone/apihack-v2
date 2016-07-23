@@ -531,10 +531,16 @@ input:focus, select:focus, textarea:focus, button:focus {
   padding-top: 10px; }
 
 /***** Media Queries ******/
+@media screen and (min-width: 320px) {
+  .results {
+    width: 300px; } }
+
 @media screen and (min-width: 420px) {
   .results {
     width: 400px; } }
 
 @media screen and (min-width: 520px) {
   .results {
-    width: 500px; } }
+    width: 500px;
+    margin-top: 10vh;
+    padding-top: 0; } }
