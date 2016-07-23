@@ -4,6 +4,7 @@ var showSearchResults = require('./showSearchResults');
 var showError = require('./showError');
 var showNextPage = require('./showNextPage');
 
+
 var getImages = function(url) {
 
   $.ajax({
@@ -39,15 +40,37 @@ var getImages = function(url) {
 
 };
 
-$(function() {
+var submitQuery = function() {
   $('.image-getter').on('submit', function(e) {
     e.preventDefault();
     $('.results').html('');
     var query = $(this).find("input[name='general']").val();
     getImages('http://loc.gov/pictures/search/?q=' + query);
   });
+};
+
+var pagination = function() {
   $('.results').on('click', '.pagination', function (e) {
     e.preventDefault();
     getImages($(this).attr('href'));
   });
+};
+
+var details = false;
+
+var popup = function() {
+  $('ul').on('click', function(e) {
+    e.preventDefault();
+    if (!details) {
+      details = true;
+      console.log(details);
+      (e.target).toggleClass("popup");
+
+    };
+  });
+};
+
+$(function() {
+  submitQuery();
+  pagination();
 });

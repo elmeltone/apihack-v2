@@ -50,6 +50,7 @@
 	var showError = __webpack_require__(4);
 	var showNextPage = __webpack_require__(5);
 	
+	
 	var getImages = function(url) {
 	
 	  $.ajax({
@@ -85,17 +86,39 @@
 	
 	};
 	
-	$(function() {
+	var submitQuery = function() {
 	  $('.image-getter').on('submit', function(e) {
 	    e.preventDefault();
 	    $('.results').html('');
 	    var query = $(this).find("input[name='general']").val();
 	    getImages('http://loc.gov/pictures/search/?q=' + query);
 	  });
+	};
+	
+	var pagination = function() {
 	  $('.results').on('click', '.pagination', function (e) {
 	    e.preventDefault();
 	    getImages($(this).attr('href'));
 	  });
+	};
+	
+	var details = false;
+	
+	var popup = function() {
+	  $('ul').on('click', function(e) {
+	    e.preventDefault();
+	    if (!details) {
+	      details = true;
+	      console.log(details);
+	      (e.target).toggleClass("popup");
+	
+	    };
+	  });
+	};
+	
+	$(function() {
+	  submitQuery();
+	  pagination();
 	});
 
 
@@ -10158,10 +10181,10 @@
 	  var imgLink2 = "http:" + target.links.item;
 	  var imgThumb = "http:" + target.image.thumb;
 	
-	  var imageElemLink = result.find('.image a');
+	  /*var imageElemLink = result.find('.image a');
 	  if (imgLink1 != null)
 	    imageElemLink.attr('href', imgLink1);
-	  else {imageElemLink.attr('href', imgLink2)};
+	  else {imageElemLink.attr('href', imgLink2)};*/
 	  var imageElemPic = result.find('.image img');
 	  imageElemPic.attr("src", imgThumb);
 	

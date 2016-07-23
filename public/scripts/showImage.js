@@ -10,10 +10,10 @@ var showImage = function(target) {
   var imgLink2 = "http:" + target.links.item;
   var imgThumb = "http:" + target.image.thumb;
 
-  var imageElemLink = result.find('.image a');
+  /*var imageElemLink = result.find('.image a');
   if (imgLink1 != null)
     imageElemLink.attr('href', imgLink1);
-  else {imageElemLink.attr('href', imgLink2)};
+  else {imageElemLink.attr('href', imgLink2)};*/
   var imageElemPic = result.find('.image img');
   imageElemPic.attr("src", imgThumb);
 

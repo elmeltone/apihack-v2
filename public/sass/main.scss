@@ -8,19 +8,19 @@ Tags: Website, Library of Congress, Photos, Historic, AJAX, API
 
 /***** Colors ******/
 
-$emphasis: #E74C3C;
 $dark: #2C3E50;
+$emphasis: #E74C3C;
 $anchor: #ECF0F1;
 $bright: #3498DB;
 $complement: #2980B9;
 $plain: #FFFFFF;
 
 /*
-#FF7F00 orange
-#FFD933 yellow
-#CCCC52 light green
-#8FB259 green
-#192B33 dark blue
+#2C3E50 dark blue
+#E74C3C red
+#ECF0F1 off-white
+#3498DB light blue
+#2980B9 shady blue
 #FFFFFF white
 */
 
@@ -44,7 +44,7 @@ $plain: #FFFFFF;
 html, body {
   height: 100%;
   margin: 0;
-  background: $plain;
+  background: $anchor;
 }
 
 a:link {
@@ -61,8 +61,8 @@ a:visited {
 
 input, select, textarea, button {
     &:focus {
-      outline: none;
-    }
+    outline: none;
+  }
 }
 
 /***** Masthead ******/
@@ -170,19 +170,23 @@ input, select, textarea, button {
 }
 
 #general-image {
-  z-index: 1;
+  z-index: 0;
   list-style-type: none;
+  position: relative;
   float: left;
   margin: 0 0 0 0;
   padding: 0 0 0 0;
   width: 100px;
   height: 100px;
   background: $dark;
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .image {
-  margin: 0;
-  padding: 0;
+  z-index: 0;
+  position: absolute;
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -224,9 +228,11 @@ input, select, textarea, button {
 }
 
 @media screen and (min-width: 520px) {
+  .results-wrapper {
+    margin-top: 5%;
+  }
   .results {
     width: 500px;
-    margin-top: 10vh;
     padding-top: 0;
   }
 }
