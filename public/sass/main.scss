@@ -56,7 +56,7 @@ a:hover {
 }
 
 a:visited {
-  color: $anchor;
+  color: lighten($emphasis, 15%);
 }
 
 input, select, textarea, button {
@@ -121,8 +121,8 @@ input, select, textarea, button {
 }
 
 .results {
-  margin: auto;
-  width: 80%;
+  margin: 0 auto;
+  width: 200px;
   text-align: center;
   overflow: hidden;
   float: none !important;
@@ -161,19 +161,6 @@ input, select, textarea, button {
   color: $bright;
 }
 
-.form-box {
-  width: 33.333%;
-  margin: auto;
-  padding: auto;
-  display: inline;
-}
-
-.details {
-  border-radius: 15px;
-  margin: 5px;
-  display: inline;
-}
-
 .button {
   background-color: $emphasis;
   color: $bright;
@@ -183,26 +170,55 @@ input, select, textarea, button {
 }
 
 #general-image {
+  z-index: 1;
   list-style-type: none;
-  padding-bottom: 25px;
-  padding-left: 0;
+  float: left;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  width: 100px;
+  height: 100px;
+  background: $dark;
 }
 
-#general-image li {
+.image {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  opacity: .75;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.image-creator, .image-callnumber, .image-notes {
   max-width: 55%;
   margin: auto;
   font-family: serif;
   text-align: center;
-}
-
-.image-creator {
-  padding-top: -10px;
+  display: none;
 }
 
 .hidden {
   display: none;
 }
 
+.currentPage {
+  clear: both;
+  padding-top: 10px;
+}
+
 /***** Media Queries ******/
 
+@media screen and (min-width: 420px) {
+  .results {
+    width: 400px;
+  }
+}
 
+@media screen and (min-width: 520px) {
+  .results {
+    width: 500px;
+  }
+}
