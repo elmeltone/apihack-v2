@@ -4,7 +4,7 @@ var showSearchResults = require('./showSearchResults');
 var showError = require('./showError');
 
 var showNextPage = function(url, label) {
-  var page = '<p><a href="'+url+'" class="'+label+' pagination">'+label+' Page</a></p>';
+  var page = '<a href="'+url+'" class="'+label+' pagination">'+label+'</a>';
   return page;
 };
 

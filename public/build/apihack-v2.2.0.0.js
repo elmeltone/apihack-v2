@@ -71,17 +71,17 @@
 	    });
 	  })
 	  .done(function(result){
-	    $('.results').append('<p class="currentPage">'+result.pages.current+'</p>');
+	    $('.results').append('<div class="currentPage"><span class="pageCount">'+result.pages.current+'</span></div>');
 	
-	    var nextPage = showNextPage(result.pages.next, 'Next');
-	    var endPage = '<p id="endPage">End results</p>';
+	    var nextPage = showNextPage(result.pages.next, '>>');
+	    var endPage = '<p id="endPage">End</p>';
 	    if (result.pages.next != ((null) || (undefined)))
-	      $(nextPage).appendTo('.results');
-	    else {$(endPage).appendTo('.results')};
+	      $(nextPage).appendTo('.currentPage');
+	    else {$(endPage).appendTo('.currentPage')};
 	
-	    var previousPage = showNextPage(result.pages.previous, 'Previous');
+	    var previousPage = showNextPage(result.pages.previous, '<<');
 	    if (result.pages.previous != ((null) || (undefined)))
-	      $(previousPage).appendTo('.results');
+	      $(previousPage).prependTo('.currentPage');
 	    });
 	
 	};
@@ -99,20 +99,6 @@
 	  $('.results').on('click', '.pagination', function (e) {
 	    e.preventDefault();
 	    getImages($(this).attr('href'));
-	  });
-	};
-	
-	var details = false;
-	
-	var popup = function() {
-	  $('ul').on('click', function(e) {
-	    e.preventDefault();
-	    if (!details) {
-	      details = true;
-	      console.log(details);
-	      (e.target).toggleClass("popup");
-	
-	    };
 	  });
 	};
 	
@@ -10181,10 +10167,10 @@
 	  var imgLink2 = "http:" + target.links.item;
 	  var imgThumb = "http:" + target.image.thumb;
 	
-	  /*var imageElemLink = result.find('.image a');
+	  var imageElemLink = result.find('.image a');
 	  if (imgLink1 != null)
 	    imageElemLink.attr('href', imgLink1);
-	  else {imageElemLink.attr('href', imgLink2)};*/
+	  else {imageElemLink.attr('href', imgLink2)};
 	  var imageElemPic = result.find('.image img');
 	  imageElemPic.attr("src", imgThumb);
 	
@@ -10220,7 +10206,7 @@
 	
 	var showSearchResults = function(resultNum) {
 	  var commaValue = resultNum.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-	  var results = '<p class="count"><strong>' + commaValue + ' results...</strong></p>';
+	  var results = '<p class="count"><span class="highlight2">' + commaValue + '</span> results...</p>';
 	  return results;
 	};
 	
@@ -10255,7 +10241,7 @@
 	var showError = __webpack_require__(4);
 	
 	var showNextPage = function(url, label) {
-	  var page = '<p><a href="'+url+'" class="'+label+' pagination">'+label+' Page</a></p>';
+	  var page = '<a href="'+url+'" class="'+label+' pagination">'+label+'</a>';
 	  return page;
 	};
 	

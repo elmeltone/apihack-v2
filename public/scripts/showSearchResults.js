@@ -5,7 +5,7 @@ var showNextPage = require('./showNextPage');
 
 var showSearchResults = function(resultNum) {
   var commaValue = resultNum.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-  var results = '<p class="count"><strong>' + commaValue + ' results...</strong></p>';
+  var results = '<p class="count"><span class="highlight2">' + commaValue + '</span> results...</p>';
   return results;
 };
 

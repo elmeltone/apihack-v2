@@ -25,17 +25,17 @@ var getImages = function(url) {
     });
   })
   .done(function(result){
-    $('.results').append('<p class="currentPage">'+result.pages.current+'</p>');
+    $('.results').append('<div class="currentPage"><span class="pageCount">'+result.pages.current+'</span></div>');
 
-    var nextPage = showNextPage(result.pages.next, 'Next');
-    var endPage = '<p id="endPage">End results</p>';
+    var nextPage = showNextPage(result.pages.next, '>>');
+    var endPage = '<p id="endPage">End</p>';
     if (result.pages.next != ((null) || (undefined)))
-      $(nextPage).appendTo('.results');
-    else {$(endPage).appendTo('.results')};
+      $(nextPage).appendTo('.currentPage');
+    else {$(endPage).appendTo('.currentPage')};
 
-    var previousPage = showNextPage(result.pages.previous, 'Previous');
+    var previousPage = showNextPage(result.pages.previous, '<<');
     if (result.pages.previous != ((null) || (undefined)))
-      $(previousPage).appendTo('.results');
+      $(previousPage).prependTo('.currentPage');
     });
 
 };
@@ -53,20 +53,6 @@ var pagination = function() {
   $('.results').on('click', '.pagination', function (e) {
     e.preventDefault();
     getImages($(this).attr('href'));
-  });
-};
-
-var details = false;
-
-var popup = function() {
-  $('ul').on('click', function(e) {
-    e.preventDefault();
-    if (!details) {
-      details = true;
-      console.log(details);
-      (e.target).toggleClass("popup");
-
-    };
   });
 };
 
