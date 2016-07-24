@@ -27,13 +27,13 @@ var getImages = function(url) {
   .done(function(result){
     $('.results').append('<div class="currentPage"><span class="pageCount">'+result.pages.current+'</span></div>');
 
-    var nextPage = showNextPage(result.pages.next, '>>');
+    var nextPage = showNextPage(result.pages.next, "<i class='fa fa-chevron-circle-right'></i>");
     var endPage = '<p id="endPage">End</p>';
     if (result.pages.next != ((null) || (undefined)))
       $(nextPage).appendTo('.currentPage');
     else {$(endPage).appendTo('.currentPage')};
 
-    var previousPage = showNextPage(result.pages.previous, '<<');
+    var previousPage = showNextPage(result.pages.previous, "<i class='fa fa-chevron-circle-left'></i>");
     if (result.pages.previous != ((null) || (undefined)))
       $(previousPage).prependTo('.currentPage');
     });

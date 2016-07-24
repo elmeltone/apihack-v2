@@ -32,6 +32,18 @@ $serifs: Times New Roman;
 /***** Normalize ******/
 
 @import 'normalize';
+@import "variables";
+@import "mixins";
+@import "path";
+@import "core";
+@import "larger";
+@import "fixed-width";
+@import "list";
+@import "bordered-pulled";
+@import "animated";
+@import "rotated-flipped";
+@import "stacked";
+@import "icons";
 
 /***** Mixins ******/
 
@@ -101,6 +113,10 @@ input, select, textarea, button {
   height: 32px;
   background-color: $dark;
   text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
 }
 
 .image-getter {
@@ -137,7 +153,7 @@ input, select, textarea, button {
 #results-wrapper {
   height: 90%;
   width: 100%;
-  margin: 0;
+  margin: 32px 0 0 0;
   padding: 0;
   font-size: 18px;
   color: $bright;
@@ -182,7 +198,7 @@ input, select, textarea, button {
 }
 
 .pagination {
-  margin-bottom: 48px;
+  margin-bottom: 80px;
 }
 
 /***** Footer ******/
@@ -251,6 +267,7 @@ input, select, textarea, button {
   position: relative;
   top: 10px;
   height: 2em;
+  margin-bottom: 32px;
 }
 
 .pageCount {
