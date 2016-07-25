@@ -2518,7 +2518,6 @@ input:focus, select:focus, textarea:focus, button:focus {
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   border-radius: 5px;
-  padding-left: 3%;
   text-align: center; }
 
 /***** Results Section (Middle) ******/
