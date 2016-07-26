@@ -131,7 +131,7 @@ input, select, textarea, button {
   -webkit-appearance: none;
   @include placeholder {
   color: $emphasis;
-}
+  }
 }
 
 #general {
