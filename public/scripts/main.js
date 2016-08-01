@@ -14,6 +14,7 @@ var getImages = function(url) {
       data:{
           fo:'json',
       },
+      async: isAsync,
   })
   .done(function(result){
     console.log(result);
